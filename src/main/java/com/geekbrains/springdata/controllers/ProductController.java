@@ -36,18 +36,20 @@ public class ProductController {
         productService.deleteProductByID(id);
     }
 
-    @GetMapping("/products/min_price")
-    public List<Product> findAllProductsByPriceGreaterThan(@RequestParam(defaultValue = "0") Integer min) {
-        return productService.findAllProductsByPriceGreaterThan(min);
-    }
-
-    @GetMapping("/products/max_price")
-    public List<Product> findAllProductsByPriceLessThan(@RequestParam(defaultValue = "0") Integer max) {
-        return productService.findAllProductsByPriceLessThan(max);
-    }
+//    @GetMapping("/products/min_price")
+//    public List<Product> findAllProductsByPriceGreaterThan(@RequestParam(defaultValue = "0") Integer min) {
+//        return productService.findAllProductsByPriceGreaterThan(min);
+//    }
+//
+//    @GetMapping("/products/max_price")
+//    public List<Product> findAllProductsByPriceLessThan(@RequestParam(defaultValue = "0") Integer max) {
+//        return productService.findAllProductsByPriceLessThan(max);
+//    }
 
     @GetMapping("/products/price_between")
-    public List<Product> findProductsByPriceBetween(@RequestParam(defaultValue = "0") Integer min, @RequestParam(defaultValue = "200") Integer max) {
+    public List<Product> findProductsByPriceBetween(@RequestParam(defaultValue = "0") Integer min, @RequestParam(defaultValue =  "2147483647") Integer max) {
+        System.out.println(min);
+        System.out.println(max);
         return productService.findProductsByPriceBetween(min, max);
     }
 

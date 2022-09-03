@@ -46,6 +46,16 @@
         <p></p>
         <button type="submit" class="btn btn-primary">Добавить продукт</button>
     </form>
+
+    <p></p>
+    <h3>Фильтры</h3>
+    <form novalidate ng-submit="filter()">
+        <input class="form-control" type="number" placeholder="Min" ng-model="filtr.min">
+        <p></p>
+        <input class="form-control" type="number" placeholder="Max" ng-model="filtr.max">
+        <p></p>
+        <button type="submit" class="btn btn-primary">Filter</button>
+    </form>
 </div>
 
 </body>

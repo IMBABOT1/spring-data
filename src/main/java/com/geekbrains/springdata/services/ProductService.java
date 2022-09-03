@@ -25,13 +25,13 @@ public class ProductService {
         return productRepository.findById(id);
     }
 
-    public List<Product> findAllProductsByPriceGreaterThan(Integer min) {
-        return productRepository.findAllByPriceGreaterThan(min);
-    }
-
-    public List<Product> findAllProductsByPriceLessThan(Integer max) {
-        return productRepository.findAllByPriceLessThan(max);
-    }
+//    public List<Product> findAllProductsByPriceGreaterThan(Integer min) {
+//        return productRepository.findAllByPriceGreaterThan(min);
+//    }
+//
+//    public List<Product> findAllProductsByPriceLessThan(Integer max) {
+//        return productRepository.findAllByPriceLessThan(max);
+//    }
 
     public List<Product> findProductsByPriceBetween(Integer min, Integer max) {
         return productRepository.findAllByPriceBetween(min, max);
