@@ -31,7 +31,7 @@ public class ProductController {
         return productService.getProductById(id).orElseThrow(() -> new ResourceNotFoundException("Product not found, id: " + id));
     }
 
-    @GetMapping("/products/delete{id}")
+    @GetMapping("/products/delete/{id}")
     public void deleteProductById(@PathVariable Long id) {
         productService.deleteProductByID(id);
     }
